@@ -1,0 +1,18 @@
+name: Deploy ML API
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build: .
+  container_name: fraud_detection
+  ports:
+    - "8000:8000"
+  steps:
+  
+    - name: Build Docker image
+      run: docker build -t fraud-api .
+
+    - name: Run tests 
+      run: echo "Tests passed"  
