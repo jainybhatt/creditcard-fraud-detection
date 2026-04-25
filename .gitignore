@@ -1,1 +1,7 @@
-.DS_STORE
+venv/
+__pycache__/
+*.pyc
+.git/
+.DS_Store
+*.tar
+data/*.csv
