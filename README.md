@@ -25,16 +25,19 @@ Retraining Pipeline
 ```
 fraud-detection-mlops/
 │
-├── app/
+├── fraud_detection/
 │   └── main.py              # FastAPI app
 │
 ├── pipeline/
-│   ├── train.py            # Model training
+│   ├── evauate.py          # Evalute model
+|   ├── train.py            # Model training
 │   └── retrain.py          # Retraining pipeline
 │
 ├── models/
-│   ├── fraud_model_v1.pkl
-│   └── fraud_model_v2.pkl
+│   ├── fraud_model.pkl
+|   ├── fraud_detection_pipeline.pkl
+│   └── scaler.pkl
+|   
 │
 ├── data/
 │   ├── processed_data.csv
