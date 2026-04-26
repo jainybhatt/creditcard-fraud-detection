@@ -2,7 +2,7 @@
 
 An end-to-end machine learning system to detect fraudulent credit card transactions, designed with a production-oriented workflow including model training, API deployment, Dockerization, logging, and retraining.
 
-This project addresses the real-world challenge of fraud detection, where fraudulent transactions are extremely rare (highly imbalanced data) but critically important to identify. The focus is on maximizing recall (catching fraud cases) while maintaining a balanced F1-score for overall performance.
+This project addresses the real-world challenge of fraud detection, where fraudulent transactions are extremely rare (highly imbalanced data) but critically important to identify. The focus is on maximizing recall (catching fraud cases) while maintaining a balanced F1-score for overall performance. The data has been taken from [kaggle] (https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud).
 
 The system is built using Python with Scikit-learn and XGBoost for machine learning, a FastAPI-based REST API for serving predictions, and Docker for containerization. Models are serialized using Joblib and managed through manual versioning (e.g., `fraud_model_v1.pkl`, `fraud_model_v2.pkl`) instead of a centralized model registry.
 
