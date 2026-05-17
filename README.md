@@ -1,4 +1,4 @@
-# 🚀 Credit Card Fraud Detection System (End-to-End ML + Deployment)
+# Credit Card Fraud Detection System (End-to-End ML + Deployment)
 
 An end-to-end machine learning system to detect fraudulent credit card transactions, designed with a production-oriented workflow including model training, API deployment, Dockerization, logging, and retraining.
 
@@ -8,7 +8,7 @@ The system is built using Python with Scikit-learn and XGBoost for machine learn
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 Data flows through the system as follows:
 
@@ -20,7 +20,7 @@ Retraining Pipeline
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 fraud-detection-mlops/
@@ -50,19 +50,19 @@ fraud-detection-mlops/
 
 ---
 
-## 🔄 End-to-End Workflow
+## End-to-End Workflow
 
 The pipeline begins with data preprocessing and feature engineering, followed by training a machine learning model capable of handling imbalanced data. The trained model is serialized into a `.pkl` file and stored with versioning. The API loads the model and serves real-time predictions. Incoming requests and predictions are logged for monitoring purposes, which can later be used to retrain the model with new data. Retraining produces a new version of the model, continuing the lifecycle.
 
 ---
 
-## 🧪 Model Performance
+## Model Performance
 
 Instead of relying on accuracy (which is misleading for imbalanced datasets), the system evaluates performance using recall, F1-score, and ROC-AUC. Recall is prioritized to ensure fraudulent transactions are not missed, while F1-score ensures a balance between precision and recall.
 
 ---
 
-## 🚀 Running Locally
+## Running Locally
 
 To train the model:
 
@@ -84,7 +84,7 @@ http://localhost:8000/docs
 
 ---
 
-## 🐳 Running with Docker
+## Running with Docker
 
 To build the Docker image:
 
@@ -100,7 +100,7 @@ docker run -p 8000:8000 fraud-api
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 The system exposes two main endpoints:
 
@@ -129,37 +129,37 @@ Example output:
 
 ---
 
-## 📊 Logging & Monitoring
+## Logging & Monitoring
 
 The API logs incoming requests and predictions to help track model behavior in production. These logs can be used to detect issues such as data drift and trigger retraining when necessary.
 
 ---
 
-## 🔁 Retraining Pipeline
+## Retraining Pipeline
 
 The retraining process combines historical data with newly collected data, retrains the model, and saves a new version of the model file. Versioning ensures traceability and allows rollback if needed.
 
 ---
 
-## 🧠 Key Learnings
+## Key Learnings
 
 This project demonstrates handling imbalanced datasets, building production-ready APIs, containerizing machine learning applications, implementing manual model versioning, and designing retraining workflows.
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 The system uses manual model versioning without a centralized registry, has limited monitoring capabilities, and lacks automated CI/CD integration.
 
 ---
 
-## 🔥 Future Improvements
+## Future Improvements
 
 Future enhancements include integrating a model registry, deploying to cloud infrastructure, adding CI/CD pipelines, and implementing advanced monitoring such as drift detection.
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Jainy Bhatt
 Aspiring Data Scientist / ML Engineer
